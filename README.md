@@ -31,7 +31,7 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 ## Dependencies
 
-- addon-sdk: https://github.com/mozilla/addon-sdk/
+- addon-sdk: <https://github.com/mozilla/addon-sdk/>
 
 ## Tested in
 
