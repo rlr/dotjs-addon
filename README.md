@@ -3,7 +3,7 @@ dotjs
 
 (This is a Firefox Add-on port of defunkt's Chrome extension <https://github.com/defunkt/dotjs>.)
 
-dotjs is a Firefox Add-on that executes JavaScript files in `~/.js` based on their filename.
+dotjs is a Firefox Add-on that executes JavaScript files in `~/.js` based on their filename and the domain of the site you are visiting.
 
 If you navigate to `http://www.google.com/`, dotjs will execute `~/.js/google.com.js`.
 
@@ -26,7 +26,7 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 ## Installation
 
-- You can install from Mozilla Add-ons site: [TODO: AMO URL]
+- You can install from Mozilla Add-ons site: <https://addons.mozilla.org/en-US/firefox/addon/dotjs/>
 - Or from source. Refer to the Add-on SDK Docs: <https://jetpack.mozillalabs.com/sdk/latest/docs/>
 
 ## Dependencies
