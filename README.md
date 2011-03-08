@@ -37,6 +37,10 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 - Firefox 4
 
+## Contributors (Thank you!)
+
+- xvzf: <https://github.com/xvzf>
+
 ## Credits
 
 - defunkt: <https://github.com/defunkt/dotjs>
