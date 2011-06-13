@@ -35,7 +35,7 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 ## Tested in
 
-- Firefox 4
+- Firefox 4, 5, 6
 
 ## Contributors (Thank you!)
 
