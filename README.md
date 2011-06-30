@@ -13,6 +13,8 @@ Bonus:  files in `~/.js` have jQuery 1.6.1 loaded, regardless  of  whether  the 
 
 New in v0.7: CoffeeScript support! `~/.js/example.com.coffee` gets transpiled to JavaScript and executed.
 
+New in v0.8: Windows support! Put your scripts in a `js` folder under your home directory (`C:\Users\<username>\js\.` in Windows 7).
+
 GreaseMonkey user scripts are great, but you need to publish them somewhere and re-publish after making modifications. With dotjs, just add or edit files in `~/.js`.
 
 ## Example
