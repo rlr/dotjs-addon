@@ -9,12 +9,12 @@ self.on("message", function(msg) {
         }
         if (msg.coffee) {
             eval(msg.transpiler);
-            eval(CoffeeScript.compile(msg.coffee));
-        }
-        if (msg.css) {
-            $('head').append($('<style>').text(msg.css));
+            eval(this.CoffeeScript.compile(msg.coffee));
         }
     }).call(_window, _window, _window.document);
+    if (msg.css) {
+        $('head').append($('<style>').text(msg.css));
+    }
 });
 
 self.postMessage(document.URL);
