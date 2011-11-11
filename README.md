@@ -46,7 +46,7 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 ## Contributors (Thank you!)
 
-- xvzf: <https://github.com/xvzf>
+- djl: <https://github.com/djl>
 - tdolsen: <https://github.com/tdolsen>
 
 ## Credits
