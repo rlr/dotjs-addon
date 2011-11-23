@@ -3,14 +3,13 @@ dotjs
 
 This is a Firefox Add-on port of defunkt's Chrome extension <https://github.com/defunkt/dotjs>.
 
-dotjs is a Firefox Add-on that executes JavaScript files in `~/.js` based on their filename and the domain of the site you are visiting.
+dotjs is a Firefox Add-on that executes JavaScript and CoffeeScript files in `~/.js` based on their filename and the domain of the site you are visiting.
 
-If you navigate to `http://www.google.com/`, dotjs will execute `~/.js/google.com.js`.
-If you have a `~/.js/default.js`, it will execute on every page you visit.
+If you navigate to `http://www.google.com/`, dotjs will execute `~/.js/google.com.js` and/or `~/.js/google.com.coffee`. If you have a `~/.js/default.js`, it will execute on every page you visit. Also, you can put site specific .css files in `~/.css` (`C:\Users\<username>\css\.` in Windows 7). `default.css` loads in all sites.
 
-This makes it super easy to spruce up your favorite pages using JavaScript.
+This makes it super easy to spruce up your favorite pages using JavaScript and CSS.
 
-Bonus:  files in `~/.js` have jQuery 1.6.1 loaded, regardless  of  whether  the  site  you're  hacking uses jQuery.
+Bonus:  files in `~/.js` have jQuery 1.7.1 loaded, regardless  of  whether  the  site  you're  hacking uses jQuery.
 
 GreaseMonkey user scripts are great, but you need to publish them somewhere and re-publish after making modifications. With dotjs, just add or edit files in `~/.js`.
 
@@ -45,8 +44,9 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 
 ## Changelog
+v1.1: Updated to jQuery 1.7.1 and some cleanup (Thanks djl!).
 
-v0.9: CSS support! Put site specific .css files in `~/.css` (`C:\Users\<username>\css\.` in Windows 7). `default.css` loads in all sites.
+v0.9: CSS support!
 
 v0.8: Windows support! Put your scripts in a `js` folder under your home directory (`C:\Users\<username>\js\.` in Windows 7).
 
