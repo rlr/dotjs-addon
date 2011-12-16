@@ -13,7 +13,7 @@ Bonus:  files in `~/.js` have jQuery 1.7.1 loaded, regardless  of  whether  the 
 
 GreaseMonkey user scripts are great, but you need to publish them somewhere and re-publish after making modifications. With dotjs, just add or edit files in `~/.js`.
 
-## Example
+# Example
 
     $ cat ~/.js/github.com.js
     // swap github logo with trollface
@@ -24,27 +24,59 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
 ![](https://dl.dropbox.com/u/361064/dotjs.png)
 
-## Installation
+# How to target a specific path
+
+Sometimes, you don’t want to target a whole domain, but only a path.
+
+## CSS
+
+You can use the `@-moz-document` Mozilla Extension:
+
+    /* Full path */
+    @-moz-document url-prefix(http://www.w3.org/Style/) {
+        /* CSS here */
+    }
+
+    /* Regex */
+    @-moz-document regexp("^https?:\/\/www\.w3\.org\/Style\/.*") {
+        /* CSS here */
+    }
+
+Documentation: https://developer.mozilla.org/en/CSS/@-moz-document
+
+## JavaScript
+
+You can test the `window.location` object:
+
+    // Search for a string
+    if (window.location.pathname.indexOf('/Style/') === 0) {
+        // JS here
+    }
+
+    // Regex
+    if (/^\/Style\/.*/.test(window.location.pathname)) === 0) {
+        // JS here
+    }
+
+Documentation: https://developer.mozilla.org/en/DOM/window.location
+
+# Installation
 
 - You can install from Mozilla Add-ons site: <https://addons.mozilla.org/en-US/firefox/addon/dotjs/>
 - Or from source. Refer to the Add-on SDK Docs: <https://jetpack.mozillalabs.com/sdk/latest/docs/>
 
-## Dependencies
+# Dependencies
 
 - addon-sdk: <https://github.com/mozilla/addon-sdk/>
 
-## Tested in
-
-- Firefox 4, 5, 6
-
-## Contributors (Thank you!)
+# Contributors (Thank you!)
 
 - djl: <https://github.com/djl>
 - tdolsen: <https://github.com/tdolsen>
 
 
-## Changelog
-v1.1: Updated to jQuery 1.7.1 and some cleanup (Thanks djl!).
+# Changelog
+v1.2: Updated to jQuery 1.7.1 and some cleanup (Thanks djl!).
 
 v0.9: CSS support!
 
