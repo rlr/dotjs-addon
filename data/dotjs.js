@@ -13,5 +13,8 @@
             $('head').append($('<style>').text(msg.css));
         }
     });
-    self.postMessage(document.URL);
+    // we only operate on http urls? what about chrome or resource?
+    if (document.URL.indexOf('http') === 0) {
+        self.postMessage(document.URL);    
+    }
 }(jQuery.noConflict(true)));
