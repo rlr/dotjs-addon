@@ -73,9 +73,11 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 
 - djl: <https://github.com/djl>
 - tdolsen: <https://github.com/tdolsen>
-
+- canuckistani: <https://github.com/canuckistani>
 
 # Changelog
+v1.3: Only load into into the main tab document (vs iframes, etc.).Improves memory usage and performance.
+
 v1.2: Updated to jQuery 1.7.1 and some cleanup (Thanks djl!).
 
 v0.9: CSS support!
