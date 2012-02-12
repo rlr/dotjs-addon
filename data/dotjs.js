@@ -1,20 +1,35 @@
-(function($) {
-    self.on("message", function(msg) {
+/*
+ * catch the 'load-scripts' event and inject the resilts into the current scope.
+ */
+(function() {
+    self.port.on("load-scripts", function(msg) {
+        // bail out if we're in an iframe
+        if (window.frameElement) return;
+        
+        if (msg.jquery) {
+            eval(msg.jquery);
+        }
+
         if (msg.js) {
             eval(msg.js);
         }
+
         if (msg.coffee) {
             (function() {
                 eval(msg.transpiler);
             }).call(window); // coffee-script.js assumes this === window
             eval(CoffeeScript.compile(msg.coffee));
         }
+
         if (msg.css) {
-            $('head').append($('<style>').text(msg.css));
+            var headNode = document.querySelector('head');
+            var cssNode = document.createElement('style');
+            cssNode.innerHTML = msg.css;
+            headNode.appendChild(cssNode);
         }
     });
-    // we only operate on http urls? what about chrome or resource?
+
     if (document.URL.indexOf('http') === 0) {
-        self.postMessage(document.URL);    
+        self.port.emit('init', document.URL);    
     }
-}(jQuery.noConflict(true)));
+})();
