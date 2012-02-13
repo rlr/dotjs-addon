@@ -17,10 +17,10 @@ GreaseMonkey user scripts are great, but you need to publish them somewhere and 
 
     $ cat ~/.js/github.com.js
     // swap github logo with trollface
-    $('#header .logo img')
-      .css('width', '100px')
-      .css('margin-top', '-15px')
-      .attr('src', '//bit.ly/ghD24e')
+    $('#header .site-logo img')
+    .css('width', '100px')
+    .css('margin-top', '-15px')
+    .attr('src', 'https://img.skitch.com/20110207-x4s8eys3uy641yk72jigt38bby.png');
 
 ![](https://dl.dropbox.com/u/361064/dotjs.png)
 
