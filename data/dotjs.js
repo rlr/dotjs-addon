@@ -3,6 +3,9 @@
  */
 (function() {
     self.port.on("load-scripts", function(msg) {
+        // bail out if we're in an iframe
+        if (window.frameElement) return;
+        
         if (msg.jquery) {
             eval(msg.jquery);
         }
