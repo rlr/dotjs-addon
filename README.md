@@ -76,6 +76,8 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 - canuckistani: <https://github.com/canuckistani>
 
 # Changelog
+v1.6: Leaner, meaner dotjs. A bunch of optimizations by canuckistani (Thanks! \o/).
+
 v1.3: Only load into into the main tab document (vs iframes, etc.).Improves memory usage and performance.
 
 v1.2: Updated to jQuery 1.7.1 and some cleanup (Thanks djl!).
