@@ -76,6 +76,12 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 - canuckistani: <https://github.com/canuckistani>
 
 # Changelog
+v1.9 Performance optimization. Load content scripts on DOM ready.
+
+v1.8 Updated jquery to v1.9 and coffeescript to v1.4.
+
+v1.7 Updated to version 1.7 of addon sdk along with some optimizations.
+
 v1.6: Leaner, meaner dotjs. A bunch of optimizations by canuckistani (Thanks! \o/).
 
 v1.3: Only load into into the main tab document (vs iframes, etc.).Improves memory usage and performance.
