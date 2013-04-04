@@ -2,7 +2,7 @@
  * catch the 'load-scripts' event and inject the resilts into the current scope.
  */
 (function() {
-    self.port.on("load-scripts", function(msg) {
+    self.port.on('load-scripts', function(msg) {
         // bail out if we're in an iframe
         if (window.frameElement) return;
 
