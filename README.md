@@ -74,8 +74,11 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 - djl: <https://github.com/djl>
 - tdolsen: <https://github.com/tdolsen>
 - canuckistani: <https://github.com/canuckistani>
+- bpierre: <https://github.com/bpierre>
 
 # Changelog
+v1.10 Fixed bug with default.js (Issue #28)
+
 v1.9 Performance optimization. Load content scripts on DOM ready.
 
 v1.8 Updated jquery to v1.9 and coffeescript to v1.4.
