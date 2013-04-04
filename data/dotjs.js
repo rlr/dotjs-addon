@@ -5,31 +5,33 @@
     self.port.on("load-scripts", function(msg) {
         // bail out if we're in an iframe
         if (window.frameElement) return;
-        
+
         if (msg.jquery) {
             eval(msg.jquery);
         }
 
-        if (msg.js) {
-            eval(msg.js);
-        }
+        msg.js.forEach(function(script) {
+            eval(script);
+        });
 
         if (msg.coffee) {
             (function() {
                 eval(msg.transpiler);
             }).call(window); // coffee-script.js assumes this === window
-            eval(CoffeeScript.compile(msg.coffee));
         }
+        msg.coffee.forEach(function(script) {
+            eval(CoffeeScript.compile(script));
+        });
 
-        if (msg.css) {
+        msg.css.forEach(function(styles) {
             var headNode = document.querySelector('head');
             var cssNode = document.createElement('style');
-            cssNode.innerHTML = msg.css;
+            cssNode.innerHTML = styles;
             headNode.appendChild(cssNode);
-        }
+        });
     });
 
     if (document.URL.indexOf('http') === 0) {
-        self.port.emit('init', document.URL);    
+        self.port.emit('init', document.URL);
     }
 })();
