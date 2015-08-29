@@ -77,6 +77,11 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 - bpierre: <https://github.com/bpierre>
 
 # Changelog
+v1.11 This version now looks up the files recursively for the domains. So for example, for "www.example.com" it will attempt to load:
+    www.example.com.js
+    example.com.js
+    com.js
+
 v1.10 Fixed bug with default.js (Issue #28)
 
 v1.9 Performance optimization. Load content scripts on DOM ready.
