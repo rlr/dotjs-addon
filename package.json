@@ -1,9 +1,10 @@
 {
-    "name": "dotjs", 
+    "name": "dotjs",
     "license": "BSD",
-    "author": "Ricky Rosario", 
+    "author": "Ricky Rosario",
     "version": "1.11.0",
-    "fullName": "dotjs", 
+    "fullName": "dotjs",
     "main": "lib/main.js",
-    "description": "Add-on that executes JavaScript and CoffeeScript scripts from ~/.js and loads CSS files from ~/.css based on the site domain."
+    "description": "Add-on that executes JavaScript and CoffeeScript scripts from ~/.js and loads CSS files from ~/.css based on the site domain.",
+    "permissions": {"private-browsing": true}
 }
