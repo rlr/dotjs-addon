@@ -63,11 +63,11 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 # Installation
 
 - You can install from Mozilla Add-ons site: <https://addons.mozilla.org/en-US/firefox/addon/dotjs/>
-- Or from source. Refer to the Add-on SDK Docs: <https://jetpack.mozillalabs.com/sdk/latest/docs/>
+- Or from source. Refer to the Add-on SDK Docs: <https://developer.mozilla.org/en-US/Add-ons/SDK>
 
 # Dependencies
 
-- addon-sdk: <https://github.com/mozilla/addon-sdk/>
+- jpm: <https://developer.mozilla.org/en-US/Add-ons/SDK/Tools/jpm>
 
 # Contributors (Thank you!)
 
@@ -77,6 +77,8 @@ Documentation: https://developer.mozilla.org/en/DOM/window.location
 - bpierre: <https://github.com/bpierre>
 
 # Changelog
+v1.12 Now scripts run in private browser windows (Issue #35). Fix issue where scripts were loaded multiple times. Now using jpm.
+
 v1.11 This version now looks up the files recursively for the domains. So for example, for "www.example.com" it will attempt to load:
     www.example.com.js
     example.com.js
