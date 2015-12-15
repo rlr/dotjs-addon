@@ -5,11 +5,6 @@
     var scriptsLoaded = false;
 
     self.port.on('load-scripts', function(msg) {
-        // bail if scripts were already loaded
-        // (this is workaround to weird bug where scripts are loaded 3X)
-        if (scriptsLoaded) return;
-        scriptsLoaded = true;
-
         // bail out if we're in an iframe
         if (window.frameElement) return;
 
